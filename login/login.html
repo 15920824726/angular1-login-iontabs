@@ -1,0 +1,25 @@
+<ion-view title="我的页面">
+    <ion-header-bar class="bar-positive">
+        <div class="title p">My First Ionic Temple</div>
+    </ion-header-bar>
+    <ion-content>
+        <div>
+            <div>
+                <button ng-click="showTesxArea()">showTest</button>
+            </div>
+            <button ng-click="Login()" class="button"> Login</button>
+            <button ng-click="showImg()" class="button">show Img</button>
+            <button ng-click="showWeChat()" class="button">show WeChat</button>
+        </div>
+
+        <form>
+            <label style="width: 100px;display: inline-block;" for="male">Male</label><input style="display: inline" type="tel" name="male" id="male" />
+            <br />
+            <label style="width: 100px;display: inline-block;" for="female">Female</label><input style="display: inline" type="text" name="female" id="female" />
+        </form>
+        <textarea style="width: 80%;height: 200px;background-color: #ccc;margin-bottom: 20px" ng-model="usertoken"></textarea>
+
+        <textarea style="width: 80%;height: 200px;background-color: #ccc" ng-model="userinfo"></textarea>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-header-bar align-title="center">
+        <i class="button icon-left ion-chevron-left button-clear button-dark" ng-click="back()"></i>
+        <div class="title" >back</div>
+    </ion-header-bar>
+    <ion-content style="background-color: #ccc">
+        <ion-list>
+            <ion-item ng-repeat="value in items">
+                <span>name: </span>{{value.name}}
+            </ion-item>
+        </ion-list>
+        <label style="display: inline-block; width: 200px" for="name">name</label><input style="display: inline-block;" id="name" type="text">
+        <button style="display: block" class="button" ng-click="goDesktop()">Go Desktop</button>
+        <!--<ion-slide>-->
+            <!--<div class="box blue"><h1>BLUE</h1></div>-->
+        <!--</ion-slide>-->
+        <!--<ion-slide>-->
+            <!--<div class="box yellow"><h1>YELLOW</h1></div>-->
+        <!--</ion-slide>-->
+        <!--<ion-slide on-slide-changed="slideHasChanged(index)">-->
+            <!--<div class="box pink"><h1>PINK</h1></div>-->
+        <!--</ion-slide>-->
+    </ion-content>
+</ion-view>
