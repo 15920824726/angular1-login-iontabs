@@ -1,25 +1,47 @@
-<ion-view title="我的页面">
+<ion-view title="我的页面" class="login">
     <ion-header-bar class="bar-positive">
         <div class="title p">My First Ionic Temple</div>
     </ion-header-bar>
-    <ion-content>
+    <ion-content >
         <div>
-            <div>
-                <button ng-click="showTesxArea()">showTest</button>
-            </div>
             <button ng-click="Login()" class="button"> Login</button>
             <button ng-click="showImg()" class="button">show Img</button>
             <button ng-click="showWeChat()" class="button">show WeChat</button>
         </div>
 
-        <form>
-            <label style="width: 100px;display: inline-block;" for="male">Male</label><input style="display: inline" type="tel" name="male" id="male" />
-            <br />
-            <label style="width: 100px;display: inline-block;" for="female">Female</label><input style="display: inline" type="text" name="female" id="female" />
-        </form>
-        <textarea style="width: 80%;height: 200px;background-color: #ccc;margin-bottom: 20px" ng-model="usertoken"></textarea>
+        <!--<form>-->
+            <!--<label style="width: 100px;display: inline-block;" for="male">Male</label><input style="display: inline" type="tel" name="male" id="male" />-->
+            <!--<br />-->
+            <!--<label style="width: 100px;display: inline-block;" for="female">Female</label><input style="display: inline" type="text" name="female" id="female" />-->
+        <!--</form>-->
+        <!--<ion-slide-box on-slide-changed="changeSlide(index)" style="margin-top: 20px; height: 300px;width: 350px; margin-left: 20px" show-pager="false"  >-->
+            <!--<ion-slide  style="background-color: blue;height: 100%;">-->
+                <!--<div class="box blue"><h1>BLUE</h1></div>-->
+            <!--</ion-slide>-->
+            <!--<ion-slide style="background-color: yellow;height: 100%;" >-->
+                <!--<div class="box yellow"><h1>YELLOW</h1></div>-->
+            <!--</ion-slide>-->
+            <!--<ion-slide style="background-color: pink;height: 100%;">-->
+                <!--<div class="box pink"><h1>PINK</h1></div>-->
+            <!--</ion-slide>-->
+        <!--</ion-slide-box>-->
+        <div style="width: 100%;height: 200px;margin-top: 50px" ng-repeat="data in datas"  >
+            <div class="swiper-container"  >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"  ng-repeat="ci in data.city" repeat-finish >{{ci}}</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
 
-        <textarea style="width: 80%;height: 200px;background-color: #ccc" ng-model="userinfo"></textarea>
 
+        <!--<textarea style="width: 80%;height: 200px;background-color: #ccc;margin-bottom: 20px;margin-left: 11vw" ng-model="usertoken"></textarea>-->
+
+        <textarea style="margin-top: 20px;width: 80%;height: 200px;background-color: #ccc;margin-left: 11vw" ng-model="userinfo"></textarea>
+        <p>hha</p>
+        <p>hha</p>
+        <p>hha</p>
+        <p>hha</p>
     </ion-content>
 </ion-view>

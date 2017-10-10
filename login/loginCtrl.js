@@ -5,7 +5,7 @@
 
     'use strict';
     angular.module('userInfo')
-        .controller('loginCtrl',['$scope','$state','$http',function ($scope,$state,$http) {
+        .controller('loginCtrl',['$scope','$state','$http','$translate','$window',function ($scope,$state,$http,$translate,$window) {
             $scope.Login=function () {
                 $state.go('contacts');
             }
@@ -20,9 +20,16 @@
                     image.src = imageURI;
                 }
 
+
                 function onFail(message) {
                     alert('Failed because: ' + message);
                 }
+            }
+            //
+            $scope.changeSlide=function (index) {
+                // index++;
+                //document.querySelector('.login ion-slide:nth-of-type('+index+')').style.transform="translate(50px, 0px) translateZ(0px)";
+                console.log(index);
             }
 
             $scope.showTesxArea=function () {
@@ -67,8 +74,40 @@
                 });
             }
 
+
             function InitData() {
-                console.log('ok');
+                $scope.datas=[{name:'aa','city':[{name:'xian'},{name:'beijing'},{name:'shanghai'}]},{name:'bb','city':[{name:'shanxin'},{name:'hebei'},{name:'guangzhou'}]}]
+                console.log('ok')
             }
             InitData();
         }])
+
+angular.module('userInfo').directive('repeatFinish',function($timeout){
+         return {
+             link: function(scope,element,attr){
+                   console.log(scope.$index)
+                  if(scope.$last == true){
+                        if(element==$('.swiper-container:eq('+i+')')){
+
+                        }
+                      for(var i=0;i<$('.swiper-container').length;i++){
+                          var str=$('');
+                          new Swiper($('.swiper-container:eq('+i+')'),{
+                              paginationClickable: true,
+                              spaceBetween: 30,
+                              pagination:'.swiper-pagination',
+                              slidesPerView: 'auto'
+                          })
+                      }
+
+                      // var swiper = new Swiper('.swiper-container', {
+                      //     pagination: '.swiper-pagination',
+                      //     slidesPerView: 'auto',
+                      //     paginationClickable: true,
+                      //     spaceBetween: 30
+                      // });
+                    }
+               }
+         }
+})
+
